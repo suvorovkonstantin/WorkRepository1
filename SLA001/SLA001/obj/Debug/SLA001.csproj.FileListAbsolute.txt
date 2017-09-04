@@ -1,0 +1,12 @@
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\SLA001.csprojResolveAssemblyReference.cache
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\App.g.cs
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\MainPage.g.cs
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\SLA001.g.resources
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\Bin\Debug\SLA001.dll
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\Bin\Debug\SLA001.pdb
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\Bin\Debug\AppManifest.xaml
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\Bin\Debug\SLA001.xap
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\Bin\Debug\SLA001TestPage.html
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\SLA001.dll
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\SLA001.pdb
+c:\users\k.suvorov-adm\documents\visual studio 2015\Projects\SLA001\SLA001\obj\Debug\XapCacheFile.xml
