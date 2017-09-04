@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -22,7 +24,8 @@ namespace SLA001
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Temper.RefTest();
+            Temper tmp = new Temper();
+            tmp.StartTask();
         }
     }
 }
