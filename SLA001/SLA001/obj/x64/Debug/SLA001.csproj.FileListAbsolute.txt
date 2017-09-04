@@ -1,0 +1,8 @@
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x64\Debug\SLA001.dll
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x64\Debug\SLA001.pdb
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\SLA001.csprojResolveAssemblyReference.cache
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\App.g.cs
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\MainPage.g.cs
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\SLA001.g.resources
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\SLA001.dll
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x64\Debug\SLA001.pdb

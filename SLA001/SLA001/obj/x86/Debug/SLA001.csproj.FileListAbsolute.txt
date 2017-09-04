@@ -1,0 +1,11 @@
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x86\Debug\SLA001.dll
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x86\Debug\SLA001.pdb
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x86\Debug\AppManifest.xaml
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x86\Debug\SLA001.xap
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\bin\x86\Debug\SLA001TestPage.html
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\App.g.cs
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\MainPage.g.cs
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\SLA001.g.resources
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\SLA001.dll
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\SLA001.pdb
+C:\Users\k.suvorov-adm\Documents\Visual Studio 2015\Projects\SLA001\SLA001\obj\x86\Debug\XapCacheFile.xml
