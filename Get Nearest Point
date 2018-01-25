@@ -1,0 +1,19 @@
+        internal Point GetNearestProjectionPoint(Point position, IPipelinePoint current, IPipelineWidget pipeline)
+        {
+            Dictionary<Point, double> NearestPointsList = new Dictionary<Point, double>();
+            var PointList = pipeline.Points.ToList();
+            var LimitList = new LinkedList<IPipelinePoint>(PointList.Where(p => p.Type == PointType.Infra || p.Type == PointType.First || p.Type == PointType.Last));
+            IPipelinePoint[] NearestLimits = new IPipelinePoint[] { LimitList.Find(current).Previous.Value, LimitList.Find(current).Next.Value };
+            var LinkedPoints = new LinkedList<IPipelinePoint>(PointList);
+            for (int i = PointList.IndexOf(NearestLimits[0]); i < PointList.IndexOf(NearestLimits[1]); i++)
+            {
+                IPipelinePoint[] segment = new IPipelinePoint[] { PointList[i], PointList[i + 1] };
+                var projection = Telerik.Windows.Diagrams.Core.Utils.ProjectPointOnLine(position, segment[0].Position, segment[1].Position);
+                Point projection_point;
+                if (projection.IsXBetween(segment[0].Position, segment[1].Position) && projection.IsYBetween(segment[0].Position, segment[1].Position))
+                    projection_point = projection;
+                else projection_point = segment[0].Position.Delta(position).Length < segment[1].Position.Delta(position).Length ? segment[0].Position : segment[1].Position;
+                if (!NearestPointsList.ContainsKey(projection_point)) NearestPointsList.Add(projection_point, position.Delta(projection_point).Length);
+            }
+            return NearestPointsList.OrderBy(p => p.Value).FirstOrDefault().Key;
+        }
