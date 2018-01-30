@@ -1,0 +1,35 @@
+      public void MovePoint(IPipelinePoint pipelinePoint, IPipelinePoint prev_point) 
+       { 
+           if (pipelinePoint.Type != PointType.Infra || pipelinePoint == prev_point) 
+           { 
+               return; 
+           } 
+           _listPoints.Remove(pipelinePoint); 
+           _listPoints.AddAfter(_listPoints.Find(prev_point), pipelinePoint); 
+       } 
+
+       public void RecalculateIntermediateKm() 
+       { 
+           foreach (var int_point in _listPoints.Where(p => p.Type == PointType.Intermediate)) 
+           { 
+               var seg = ((IPipelinePointManager)this).FindSegment(int_point.Position); 
+               int_point.Km = GetKmOnIntermediatePoint(int_point); 
+           } 
+       } 
+
+       public double GetKmOnIntermediatePoint(IPipelinePoint int_point) 
+       { 
+           LinkedListNode<IPipelinePoint> prev_point = _listPoints.Find(int_point); 
+           LinkedListNode<IPipelinePoint> next_point = _listPoints.Find(int_point); 
+
+           while (prev_point.Value.Type != PointType.Infra && prev_point.Value.Type != PointType.First) 
+               prev_point = prev_point.Previous; 
+           while (next_point.Value.Type != PointType.Infra && next_point.Value.Type != PointType.Last) 
+               next_point = next_point.Next; 
+
+           double mid_infra_lenght = Math.Abs(prev_point.Value.Position.X - next_point.Value.Position.X) + Math.Abs(prev_point.Value.Position.Y - next_point.Value.Position.Y); 
+
+           return prev_point.Value.Km + Math.Round(Math.Abs(prev_point.Value.Km -next_point.Value.Km) 
+                             / mid_infra_lenght 
+                             * Support2D.RectangularPathLength(prev_point.Value.Position, int_point.Position), 3); 
+       } 
