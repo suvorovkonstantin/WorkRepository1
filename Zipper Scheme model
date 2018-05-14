@@ -1,0 +1,26 @@
+        public byte[] GetFullSchemeModelEncode(int parameters)
+        {
+            var model = GetFullSchemeModel(parameters);
+
+            if (model == null)
+                return null;
+
+            Byte[] result_data = new byte[0];
+
+            using (MemoryStream serialize_stream = new MemoryStream())
+            {
+                DataContractSerializer serializer = new DataContractSerializer(typeof(SchemeModelDTO));
+                serializer.WriteObject(serialize_stream, model);
+
+                result_data = Encoding.UTF8.GetBytes(Convert.ToBase64String(serialize_stream.ToArray()));
+                using (MemoryStream in_stream = new MemoryStream(result_data))
+                using (MemoryStream out_stream = new MemoryStream())
+                using (CompressedStream compressedStream = new CompressedStream(out_stream, StreamOperationMode.Write, new DeflateSettings()))
+                {
+                    in_stream.CopyTo(compressedStream);
+                    compressedStream.Flush();
+                    result_data = out_stream.ToArray();
+                }
+                return result_data;
+            }
+        }
