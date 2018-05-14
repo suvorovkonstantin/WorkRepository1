@@ -1,0 +1,17 @@
+public SchemeModelDTO GetModel(byte[] model)
+        {
+            SchemeModelDTO result = null;
+
+            if (model != null && model.Length > 0)
+            {
+                using (MemoryStream in_stream = new MemoryStream(model))
+                using (CompressedStream zip = new CompressedStream(in_stream, StreamOperationMode.Read, new DeflateSettings()))
+                using (StreamReader out_stream_reader = new StreamReader(zip))
+                {
+                    var result_data = Convert.FromBase64String(out_stream_reader.ReadToEnd());
+                    DataContractSerializer serializer = new DataContractSerializer(typeof(SchemeModelDTO));
+                    return result = (SchemeModelDTO)serializer.ReadObject(new MemoryStream(result_data));
+                }
+            }
+            return result;
+        }
